@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./routes/Home";
 // import About from "./routes/About";
 import HeroDetails from "./routes/HeroDetails";
+import Footer from "./compopents/Footer";
 
 // import compopnets
 import Navbar from "./compopents/Navbar";
@@ -20,7 +21,8 @@ function App() {
       <Route path={'/'} element={<Home/>}/>
       {/* <Route path={'/about'} element={<About/>}/> */}
       <Route path={'/:id'} element={<HeroDetails/>}/>
-    </Routes>    
+    </Routes> 
+    <Footer/>   
    </Router>
   );
 }

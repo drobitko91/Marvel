@@ -85,6 +85,7 @@ header {
   width: min(90%, 45rem);
   margin: 2rem auto;
   min-height: 100%;
+  text-align: center;
 }
 
 .container.large {
@@ -161,4 +162,9 @@ header {
 .hero__details li {
   list-style: disc;
   margin-left: 1.5rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 10rem;
 }
