@@ -1,4 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+import { fetchAllHeroes } from '../utils/utils';
+
+
 
 // import components
 import Container from '../compopents/Container';
@@ -13,7 +16,18 @@ export default function Home() {
 
     let cards;
 
-    if (heroes) {
+    const getAllHeroes = async () => {
+      let heroes = await fetchAllHeroes();
+      setHeroes(heroes);
+    }
+
+
+    useEffect(() => {
+      getAllHeroes();
+    }, [])
+
+    if (heroes) {      
+
       cards = heroes.map((hero) => (
         <Card 
         name={hero.name} 
@@ -22,7 +36,6 @@ export default function Home() {
         thumbnail={`${hero.thumbnail.path}/${IMAGE_SIZE}.${hero.thumbnail.extension}`}
         />
       ) );
-
 
       console.log(cards)
     }

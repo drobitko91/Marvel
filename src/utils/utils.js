@@ -48,4 +48,25 @@ const fetchHero = async (id) => {
     }
 }
 
-export {fetchHeroes, fetchHero};
+const fetchAllHeroes = async () => {
+    let baseUrl = `${API_URL}/v1/public/characters`;
+
+    let ts = Date.now().toString();
+    let apiKey = process.env.REACT_APP_API_KEY;
+    let privateKey = process.env.REACT_APP_PRIVATE_KEY;
+    let hash = getHash(ts, privateKey, apiKey);
+
+    let url = `${baseUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}`;
+
+    try {
+        let response = await fetch(url);
+        let data = await response.json();
+        // console.log('fetchAllHeroes', data.data.results);
+        return data.data.results;
+    } catch (err) {
+        console.error(err);
+        return;
+    }
+}
+
+export {fetchHeroes, fetchHero, fetchAllHeroes};
