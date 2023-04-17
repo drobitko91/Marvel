@@ -2,7 +2,7 @@
 // ----------------------------------------------------
 
 
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import {Routes, Route, HashRouter} from "react-router-dom";
 
 // import routes
 import Home from "./routes/Home";
@@ -15,15 +15,15 @@ import Navbar from "./compopents/Navbar";
 
 function App() {
   return (
-   <Router>
+   <HashRouter>
     <Navbar/>
     <Routes>
-      <Route path={'/'} element={<Home/>}/>
+      <Route path={'#'} element={<Home/>}/>
       {/* <Route path={'/about'} element={<About/>}/> */}
       <Route path={'/:id'} element={<HeroDetails/>}/>
     </Routes> 
     <Footer/>   
-   </Router>
+   </HashRouter>
   );
 }
 
