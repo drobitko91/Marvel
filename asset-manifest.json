@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Marvel/static/css/main.aa80b63e.css",
-    "main.js": "/Marvel/static/js/main.aec23966.js",
+    "main.js": "/Marvel/static/js/main.390ba34e.js",
     "index.html": "/Marvel/index.html",
     "main.aa80b63e.css.map": "/Marvel/static/css/main.aa80b63e.css.map",
-    "main.aec23966.js.map": "/Marvel/static/js/main.aec23966.js.map"
+    "main.390ba34e.js.map": "/Marvel/static/js/main.390ba34e.js.map"
   },
   "entrypoints": [
     "static/css/main.aa80b63e.css",
-    "static/js/main.aec23966.js"
+    "static/js/main.390ba34e.js"
   ]
 }
