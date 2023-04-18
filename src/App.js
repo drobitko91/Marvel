@@ -18,7 +18,7 @@ function App() {
    <HashRouter>
     <Navbar/>
     <Routes>
-      <Route path={'#'} element={<Home/>}/>
+      <Route path={'/'} element={<Home/>}/>
       {/* <Route path={'/about'} element={<About/>}/> */}
       <Route path={'/:id'} element={<HeroDetails/>}/>
     </Routes> 
